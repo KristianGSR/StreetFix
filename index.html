@@ -22,36 +22,35 @@
 
     <!-- ========== NAVEGACIÓN ========== -->
     <!-- CAMBIAR COLOR: 'bg-white' es el fondo. 'text-gray-800' es el texto. -->
-    <nav class="bg-white shadow-md w-full sticky top-0 z-50">
+   <nav class="bg-white shadow-md w-full sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <img class="h-12 w-auto" src="logo-streetfix.png" alt="Logo de Street Fix">
-                    <!-- CAMBIAR: Reemplaza 'placehold.co' con la URL de tu logo -->
+                
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="#inicio">
+                        <img class="h-12 w-auto hover:opacity-90 transition" src="logo-streetfix.png" alt="Logo de Street Fix">
+                    </a>
                 </div>
                 
-                <!-- Menú de Escritorio -->
-                <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="#inicio" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                    <a href="#conocenos" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Conócenos</a>
-                    <a href="#productos" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
-                    <a href="#contacto" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contáctanos</a>
-                    
-                    <!-- CAMBIAR COLOR: Botón de llamada a la acción en el menú -->
-                    <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm">
+                <div class="hidden md:flex flex-1 justify-center items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-sm font-medium transition">Inicio</a>
+                    <a href="#conocenos" class="text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-sm font-medium transition">Conócenos</a>
+                    <a href="#productos" class="text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-sm font-medium transition">Productos</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md text-sm font-medium transition">Contáctanos</a>
+                </div>
+
+                <div class="hidden md:flex items-center flex-shrink-0">
+                    <a href="#" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-md text-sm font-bold shadow-md transition duration-300 transform hover:scale-105">
                         Descargar App
                     </a>
                 </div>
                 
-                <!-- Botón de Menú Móvil -->
                 <div class="md:hidden flex items-center">
                     <button id="boton-menu-movil" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
                         <span class="sr-only">Abrir menú principal</span>
-                        <!-- Icono de hamburguesa -->
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <!-- Icono de 'X' (cerrar) -->
                         <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -60,7 +59,6 @@
             </div>
         </div>
 
-        <!-- Menú Móvil (oculto por defecto) -->
         <div class="md:hidden hidden" id="menu-movil">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#inicio" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
@@ -68,9 +66,7 @@
                 <a href="#productos" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Productos</a>
                 <a href="#contacto" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contáctanos</a>
             </div>
-            <!-- Botón de descarga en el menú móvil -->
             <div class="px-4 pb-4">
-                <!-- CAMBIAR COLOR: Botón principal en el menú móvil -->
                 <a href="#" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm block">
                     Descargar App
                 </a>
@@ -326,6 +322,7 @@
 </body>
 
 </html>
+
 
 
 
