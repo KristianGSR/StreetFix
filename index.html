@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CAMBIAR: El título de tu StartUp -->
+    <title>StreetFix</title>
+    
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Carga de la fuente Inter (puedes cambiarla si prefieres) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a la hoja de estilos CSS separada -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <!-- CAMBIAR COLOR: 'bg-white' es el fondo. 'text-gray-800' es el texto. -->
+    <nav class="bg-white shadow-md w-full sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- CAMBIAR: Reemplaza 'placehold.co' con la URL de tu logo -->
+                    <img class="h-10 w-auto" src="https://placehold.co/150x50/cccccc/333333?text=TuLogo" alt="Logo de la StartUp">
+                </div>
+                
+                <!-- Menú de Escritorio -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                    <a href="#conocenos" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Conócenos</a>
+                    <a href="#productos" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contáctanos</a>
+                    
+                    <!-- CAMBIAR COLOR: Botón de llamada a la acción en el menú -->
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm">
+                        Descargar App
+                    </a>
+                </div>
+                
+                <!-- Botón de Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="boton-menu-movil" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <!-- Icono de hamburguesa -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Icono de 'X' (cerrar) -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil (oculto por defecto) -->
+        <div class="md:hidden hidden" id="menu-movil">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                <a href="#conocenos" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Conócenos</a>
+                <a href="#productos" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Productos</a>
+                <a href="#contacto" class="menu-movil-link text-gray-600 hover:bg-gray-50 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contáctanos</a>
+            </div>
+            <!-- Botón de descarga en el menú móvil -->
+            <div class="px-4 pb-4">
+                <!-- CAMBIAR COLOR: Botón principal en el menú móvil -->
+                <a href="#" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm block">
+                    Descargar App
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main>
+
+        <!-- SECCIÓN 1: INICIO (HERO) -->
+        <!-- CAMBIAR COLOR: 'bg-gray-50' es el fondo de esta sección -->
+        <section id="inicio" class="bg-gray-50 pt-20 pb-20 md:pt-28 md:pb-28">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Columna de Texto -->
+                    <div class="text-center md:text-left">
+                        <!-- CAMBIAR: Título principal y subtítulo -->
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            La solución que estabas esperando para <span class="text-blue-600">organizar tu día</span>
+                        </h1>
+                        <p class="mt-6 text-lg text-gray-600">
+                            Nuestra app revoluciona la forma en que gestionas tus tareas, proyectos y metas. Únete a miles de usuarios que ya disfrutan de una vida más productiva.
+                        </p>
+                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <!-- CAMBIAR COLOR: 'bg-blue-600' es el botón principal -->
+                            <a href="#" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-3 px-8 rounded-lg shadow-md text-lg transition duration-300">
+                                Descargar Ahora
+                            </a>
+                            <!-- CAMBIAR COLOR: 'text-blue-600' es el botón secundario -->
+                            <a href="#productos" class="w-full sm:w-auto bg-white hover:bg-gray-50 text-blue-600 text-center font-medium py-3 px-8 rounded-lg shadow-md border border-gray-300 text-lg transition duration-300">
+                                Ver Funciones
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna de Imagen -->
+                    <div class="flex justify-center">
+                        <!-- CAMBIAR: Reemplaza 'placehold.co' con una captura de tu app -->
+                        <img src="https://placehold.co/500x550/e2e8f0/333333?text=Captura+de+la+App" alt="Captura de pantalla de la app" class="rounded-lg shadow-2xl max-w-sm w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CONÓCENOS -->
+        <section id="conocenos" class="py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Título de la sección -->
+                <div class="text-center mb-16">
+                    <!-- CAMBIAR: Título y subtítulo de la sección -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        Conoce a nuestro equipo
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Somos un grupo de desarrolladores y diseñadores apasionados por crear tecnología útil.
+                    </p>
+                </div>
+                
+                <!-- Grid del Equipo -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Miembro 1 -->
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg">
+                        <!-- CAMBIAR: Foto, nombre y rol del miembro -->
+                        <img class="w-32 h-32 rounded-full mx-auto shadow-md" src="https://placehold.co/200x200/cccccc/333333?text=Foto" alt="Foto de [Nombre]">
+                        <h3 class="mt-6 text-xl font-semibold text-gray-900">[Francisco Salazar]</h3>
+                        <p class="mt-1 text-blue-600">CEO</p>
+                        <p class="mt-4 text-gray-600 text-sm">
+                            [Breve descripción del miembro del equipo y su pasión por el proyecto.]
+                        </p>
+                    </div>
+                    
+                    <!-- Miembro 2 -->
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg">
+                        <!-- CAMBIAR: Foto, nombre y rol del miembro -->
+                        <img class="w-32 h-32 rounded-full mx-auto shadow-md" src="https://placehold.co/200x200/cccccc/333333?text=Foto" alt="Foto de [Nombre]">
+                        <h3 class="mt-6 text-xl font-semibold text-gray-900">[Adrian Galaz]</h3>
+                        <p class="mt-1 text-blue-600">Diseñadora Principal (UX/UI)</p>
+                        <p class="mt-4 text-gray-600 text-sm">
+                            [Breve descripción del miembro del equipo y su pasión por el proyecto.]
+                        </p>
+                    </div>
+                    
+                    <!-- Miembro 3 -->
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg">
+                        <!-- CAMBIAR: Foto, nombre y rol del miembro -->
+                        <img class="w-32 h-32 rounded-full mx-auto shadow-md" src="https://placehold.co/200x200/cccccc/333333?text=Foto" alt="Foto de [Nombre]">
+                        <h3 class="mt-6 text-xl font-semibold text-gray-900">[Kristian Saenz]</h3>
+                        <p class="mt-1 text-blue-600">Desarrollador Líder (Mobile)</p>
+                        <p class="mt-4 text-gray-600 text-sm">
+                            [Breve descripción del miembro del equipo y su pasión por el proyecto.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PRODUCTOS (FUNCIONES) -->
+        <!-- CAMBIAR COLOR: 'bg-gray-900' es el fondo, 'text-white' es el texto -->
+        <section id="productos" class="bg-gray-900 py-20 md:py-28 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Título de la sección -->
+                <div class="text-center mb-16">
+                    <!-- CAMBIAR: Título y subtítulo de la sección -->
+                    <h2 class="text-3xl md:text-4xl font-bold">
+                        Un producto diseñado para ti
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-300">
+                        Descubre todo lo que nuestra app puede hacer por tu productividad.
+                    </p>
+                </div>
+
+                <!-- Grid de Funciones -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Función 1 -->
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left">
+                        <!-- Icono (usando SVG de Heroicons) -->
+                        <!-- CAMBIAR COLOR: 'text-blue-400' es el color del icono -->
+                        <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gray-800 rounded-full">
+                            <svg class="w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <!-- CAMBIAR: Texto de la función -->
+                        <h3 class="mt-6 text-xl font-semibold">Gestión de Tareas</h3>
+                        <p class="mt-3 text-gray-300">
+                            Crea, organiza y prioriza tus tareas diarias con una interfaz simple e intuitiva.
+                        </p>
+                    </div>
+                    
+                    <!-- Función 2 -->
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left">
+                        <!-- Icono -->
+                        <!-- CAMBIAR COLOR: 'text-blue-400' es el color del icono -->
+                        <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gray-800 rounded-full">
+                            <svg class="w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <!-- CAMBIAR: Texto de la función -->
+                        <h3 class="mt-6 text-xl font-semibold">Seguimiento de Tiempo</h3>
+                        <p class="mt-3 text-gray-300">
+                            Mide el tiempo que dedicas a cada proyecto y optimiza tu flujo de trabajo.
+                        </p>
+                    </div>
+
+                    <!-- Función 3 -->
+                    <div class="flex flex-col items-center text-center md:items-start md:text-left">
+                        <!-- Icono -->
+                        <!-- CAMBIAR COLOR: 'text-blue-400' es el color del icono -->
+                        <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gray-800 rounded-full">
+                            <svg class="w-8 h-8 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-1.657-1.343-3-3-3h-4c-1.657 0-3 1.343-3 3v2m17 0h-5M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-1.657 1.343-3 3-3h4c1.657 0 3 1.343 3 3v2M12 10a3 3 0 110-6 3 3 0 010 6z" />
+
+                            </svg>
+                        </div>
+                        <!-- CAMBIAR: Texto de la función -->
+                        <h3 class="mt-6 text-xl font-semibold">Colaboración en Equipo</h3>
+                        <p class="mt-3 text-gray-300">
+                            Comparte proyectos, asigna tareas y mantente sincronizado con tu equipo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: CONTÁCTANOS -->
+        <section id="contacto" class="py-20 md:py-28 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Título de la sección -->
+                <div class="text-center mb-16">
+                    <!-- CAMBIAR: Título y subtítulo de la sección -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        ¿Contactanos?
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Estamos listos para escuchar tus ideas, preguntas o sugerencias.
+                    </p>
+                </div>
+                
+                <!-- Formulario de Contacto -->
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                    <!-- 
+                        Para una práctica, 'action="#"' es suficiente.
+                        Simula el envío del formulario.
+                    -->
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Nombre -->
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        <!-- Asunto -->
+                        <div class="mt-6">
+                            <label for="asunto" class="block text-sm font-medium text-gray-700">Asunto</label>
+                            <input type="text" name="asunto" id="asunto" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <!-- Mensaje -->
+                        <div class="mt-6">
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <!-- Botón de Enviar -->
+                        <div class="mt-8 text-right">
+                            <!-- CAMBIAR COLOR: 'bg-blue-600' es el botón de enviar -->
+                            <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-10 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER (PIE DE PÁGINA) ========== -->
+    <!-- CAMBIAR COLOR: 'bg-gray-800' es el fondo, 'text-gray-300' es el texto -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Copyright -->
+                <div class="text-center md:text-left">
+                    <!-- CAMBIAR: El nombre de tu StartUp -->
+                    <p class="text-sm">&copy; 2025 [Nombre de tu StartUp]. Todos los derechos reservados.</p>
+                </div>
+                
+                <!-- Redes Sociales (Opcional) -->
+                <div class="flex space-x-6 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-white transition duration-300">Facebook</a>
+                    <a href="#" class="hover:text-white transition duration-300">Twitter</a>
+                    <a href="#" class="hover:text-white transition duration-300">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Enlace al archivo JavaScript separado -->
+    <script src="script.js" defer></script>
+</body>
+</html>

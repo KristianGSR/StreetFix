@@ -1,0 +1,8 @@
+/* Aplicar la fuente Inter como predeterminada */
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Estilos para la animación del menú móvil */
+#menu-movil {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
